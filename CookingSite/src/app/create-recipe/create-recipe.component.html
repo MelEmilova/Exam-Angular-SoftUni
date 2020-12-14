@@ -1,0 +1,147 @@
+<h4 class="headingCreate">
+  Create your Recipe
+</h4>
+
+<section class="container">
+  <div class="innerContainer first">
+
+
+    <form #productForm='ngForm' (ngSubmit)="CreateQuontit()">
+
+      <div class="uploadRecipe-heading">
+        <p class="uploadRecipe-heading-title">Title of recipe</p>
+        <input type="text" (keyup)="getValTitle($event.target.value)" required pattern="^[A-Z][A-Za-z ]+" name="title" class="uploadRecipe-heading-title-input  input">
+      </div>
+
+      <div class="uploadRecipe-img">
+        <label class="uploadRecipe-heading-title" for="img">Select image URL:</label>
+        <input type="url" id="img" name="img" accept="image/*" (keyup)="getValImg($event.target.value)" class="input inputImg">
+      </div>
+
+      <p class="uploadRecipe-heading-title">Select needed products:</p>
+
+      <div class="productContainer">
+      <div class="productFirstContainer">
+        <div class="uploadRecipe-Meat">
+          <select name="titleProduct" [(ngModel)]="modelMeatProduct.title" #titleProduct="ngModel" class="input titleProduct">
+            <option value="MEAT" ></option>
+            <option value="Chicken">Chicken</option>
+            <option value="Pork">Pork</option>
+            <option value="Beaf">Beaf</option>
+            <option value="Lamb">Lamb</option>
+          </select>
+
+          <input type="number" name="quontProduct" [(ngModel)]="modelMeatQuont.quantity" #quontProduct="ngModel" class="input quiantProduct">
+
+          <select name="quontProduct" [(ngModel)]="modelMeatQuont.quantityType" #quontProduct="ngModel" class="input">
+            <option value="kg">kg</option>
+            <option value="gr">gr</option>
+
+          </select>
+        </div>
+
+        <div class="uploadRecipe-Vegetables">
+          <select name="titleProduct" [(ngModel)]="modelVegetableProduct.title" #titleProduct="ngModel" class="input titleProduct">
+            <option value="Vegetable"></option>
+            <option value="Potatoes">Potatoes</option>
+            <option value="Zucchini">Zucchini</option>
+            <option value="Tomato">Tomato</option>
+            <option value="Eggplant">Eggplant</option>
+            <option value="Carrots">Carrots</option>
+            <option value="Onions">Onions</option>
+            <option value="Eggplant">Eggplant</option>
+            <option value="Mushrooms">Mushrooms</option>
+          </select>
+
+          <input type="number" name="quontProduct" [(ngModel)]="modelVegetableQuont.quantity" #quontProduct="ngModel" class="input quiantProduct">
+
+          <select name="quontProduct" [(ngModel)]="modelVegetableQuont.quantityType" #quontProduct="ngModel" class="input">
+            <option value="kg">kg</option>
+            <option value="gr">gr</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="productSEcondContainer">
+      <div class="uploadRecipe-Dairy">
+        <select name="titleProduct" [(ngModel)]="modelDairyProduct.title" #titleProduct="ngModel" class="input titleProduct">
+          <option value="Dairy"></option>
+          <option value="Feta cheese">Feta cheese</option>
+          <option value="Yellow cheese">Yellow cheese</option>
+          <option value="Yoghurt">Yoghurt</option>
+          <option value="Milk">Milk</option>
+          <option value="Cream">Cream</option>
+          <option value="Cottage cheese">Cottage cheese</option>
+          <option value="Sour cream">Sour cream</option>
+        </select>
+
+        <input type="number" name="quontProduct" [(ngModel)]="modelDairyQuant.quantity" #quontProduct="ngModel" class="input quiantProduct">
+
+        <select name="quontProduct" [(ngModel)]="modelDairyQuant.quantityType" #quontProduct="ngModel" class="input">
+          <option value="kg">kg</option>
+          <option value="gr">gr</option>
+          <option value="L">L</option>
+          <option value="ml">ml</option>
+        </select>
+      </div>
+
+      <div class="uploadRecipe-Legumes">
+        <select name="titleProduct" [(ngModel)]="modelLegumesProduct.title" #titleProduct="ngModel" class="input titleProduct">
+          <option value="Legumes"></option>
+          <option value="Beans">Beans</option>
+          <option value="Lentils">Lentils</option>
+          <option value="Rice">Rice</option>
+          <option value="Chickpeas">Chickpeas</option>
+        </select>
+
+        <input type="number" name="quontProduct" [(ngModel)]="modelLegumesQuant.quantity" #quontProduct="ngModel" class="input quiantProduct">
+
+        <select name="quontProduct" [(ngModel)]="modelLegumesQuant.quantityType" #quontProduct="ngModel" class="input">
+          <option value="kg">kg</option>
+          <option value="gr">gr</option>
+        </select>
+      </div>
+    </div>
+
+
+  </div>
+ 
+      <div class="uploadRecipe-description">
+        <p class="uploadRecipe-heading-title">Description:</p>
+        <textarea name="" id="" cols="88" rows="10" required name="description"
+          (keyup)="getValDescrip($event.target.value)" class="input"></textarea>
+      </div>
+  
+        <button type="submit">Preview of your Recipe</button>
+     
+    </form>
+    <button type="submit" (click)="createRecipe()" class="create">Create your Recipe</button>
+  </div>
+
+
+  <div class="innerContainer second">
+    <h4 class="uploadRecipe-heading-title previewHeading">Preview of your recipe</h4>
+    <form action="" #previewForm='ngForm' (ngSubmit)="CreateQuontit()">
+
+      <h3 class="uploadRecipe-heading-title previewTitle" >{{recipeForFetch.title}}</h3>
+    
+      <img src={{recipeForFetch.imageUrl}} alt="" class="previewImg">
+
+
+      <div class="previewProduct">
+        <ul>
+          <li *ngFor="let quant of quantList">{{quant}}</li>
+        </ul>
+        <ul>
+          <li *ngFor="let type of quantListType"> - {{type}}</li>
+        </ul>
+        <ul> 
+          <li *ngFor="let prod of productList"> - {{prod}}</li>
+        </ul>
+      </div>
+      <p class="previewDescription">{{recipeForFetch.description}}</p>
+    </form>
+  
+  </div>
+</section>

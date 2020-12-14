@@ -1,0 +1,222 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+
+ .headingCreate {
+   text-align: center;
+   font-weight: 900;
+   margin: 0 auto;
+   text-align: center;
+   width: 900px;
+   font-family: 'Nothing You Could Do', cursive;
+   font-size: 45px;
+   color: #303961;
+   position: relative;
+   top: -50px;
+ }
+
+ .container {
+   display: flex;
+ }
+
+ .innerContainer {
+   margin-left: 20px;
+   margin-right: 20px;
+   box-shadow: 0px 0px 32px -2px rgba(0, 0, 0, 0.75);
+   border: none;
+   border-radius: 10px;
+ }
+
+ .innerContainer:first-child {
+   width: 60%;
+ }
+
+ .innerContainer:last-child {
+   width: 40%;
+ }
+
+ .productContainer {
+   display: flex;
+ }
+
+ .uploadRecipe-heading {
+   text-align: center;
+   margin-bottom: 20px;
+   padding-top: 20px;
+ }
+
+ .uploadRecipe-heading-title {
+   margin-left: 55px;
+   margin-bottom: 5px;
+   font-size: 20px;
+   margin-top: 7px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 30px;
+   color: #303961;
+
+ }
+
+ .uploadRecipe-heading-title-input {
+   margin-left: 20px;
+   width: 500px;
+   padding-left: 250px;
+ }
+
+ .input {
+   border-radius: 3px;
+   border: none;
+   background: #30396169;
+   color: white;
+   font-size: 18px;
+   padding: 5px;
+   margin-bottom: 10px;
+   outline: none;
+ }
+
+ .uploadRecipe-img {
+   margin: 10px 20px 20px 10px;
+ }
+
+ .uploadRecipe-img label {
+   margin-right: 5px;
+ }
+
+ .inputImg {
+   width: 600px;
+ }
+
+ .productFirstContainer {
+   margin-right: 60px;
+   margin-left: 20px;
+ }
+
+ .titleProduct {
+   width: 150px;
+   margin-left: 20px;
+   font-size: 18px;
+   margin-right: 20px;
+ }
+
+ .quiantProduct {
+   margin-right: 20px;
+   width: 100px;
+
+ }
+
+ .productContainer {
+   margin-top: 15px;
+ }
+
+ .uploadRecipe-description {
+   margin-top: 20px;
+ }
+
+ .uploadRecipe-description textarea {
+   margin-left: 40px;
+ }
+
+
+
+ button {
+   padding: 10px 20px;
+   font-size: 25px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border: none;
+   background: #303961;
+   border-radius: 7px;
+   color: white;
+   font-style: italic;
+   box-shadow: 2px 2px 30px 0 rgba(1, 77, 57, 0.20);
+   cursor: pointer;
+   margin-left: 36%;
+   outline: none;
+ }
+
+ .create {
+   background: #3F7B31;
+   margin-left: 20px;
+   position: relative;
+   top: -87px;
+   left: 67%;
+ }
+
+ .previewTitle {
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+
+ .previewImg {
+   width: 300px;
+   margin-left: 50px;
+   border-radius: 7px;
+   object-fit: cover;
+ }
+
+ .previewProduct {
+   display: flex;
+   margin-left: 70px;
+   font-size: 20px;
+ }
+
+ .previewProduct ul {
+   padding: 2px;
+ }
+
+ .previewProduct ul li {
+   color: #303961;
+   font-size: 20px;
+   margin: 0;
+   list-style-type: none;
+   font-weight: 700;
+ }
+
+ .previewDescription {
+   margin: 10px 50px;
+   text-align: justify;
+   font-size: 20px;
+   color: #303961;
+   font-weight: 700;
+ }
+
+ .previewHeading {
+   margin-top: 20px;
+   font-family: 'Nothing You Could Do', cursive;
+   font-size: 35px;
+   text-decoration: underline;
+ }
+
+ @media (max-width: 850px) {
+   .container {
+     flex-direction: column;
+   }
+
+   .innerContainer:first-child,
+   .innerContainer:last-child {
+     width: 90%;
+     margin-top: 50px;
+   }
+
+   textarea {
+     width: 80%;
+   }
+
+   .uploadRecipe-heading-title {
+     text-align: center;
+  
+   }
+
+    .create{
+      background: #3F7B31;
+      margin-left: 20px;
+      position: relative;
+      top: -10px;
+      left: 33%;
+      padding-right: 60px;
+    }
+
+    .headingCreate{
+      top: 15px;
+    }
+
+  }

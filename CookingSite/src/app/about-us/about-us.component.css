@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+section{
+  width: 60%;
+  height: 300px;
+  margin: 30px auto;
+  margin-bottom: 100px;
+  padding: 60px;
+  border: none;
+  background: rgba(82, 76, 59, 0.507);
+  box-shadow: 4px 6px 25px 5px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+
+img{
+  width: 200px;
+  border-radius: 52%;
+  float: left;
+  padding-top: 20px;
+
+}
+
+p{
+  padding-left: 25%;
+  text-align: justify;
+  font-size: 22px;
+  color: white;
+  line-height: 1.5;
+  padding-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,105 @@
+section{
+ height: 500px;
+ width: 550px;
+ background: linear-gradient(90deg, rgba(48,57,97,1) 0%, rgba(191,199,233,1) 50%, rgba(48,57,97,1) 100%);
+ box-shadow: 1px 0px 28px 0px rgba(10,9,10,1);
+ height: 451px;
+ margin: 0 auto;
+ margin-bottom: 100px;
+ border: none;
+ border-radius: 20px;
+}
+
+article{
+  width: 300px;
+  height: 330px;
+  margin: 0 auto;
+  background: #303961a1;
+  position: relative;
+  top: 55px;
+  border-radius: 20px;
+}
+
+h3{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: white
+}
+
+.logo{
+  font-size: 50px;
+  margin-left: 40%;
+  margin-top: 15px;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+input{
+  margin-left: 46px;
+  margin-top: 20px;
+  padding: 8px 10px 8px 10px;
+  border: none;
+  border-radius: 5px;
+  outline:none;
+  width: 195px;
+}
+button{
+  margin-top: 20px;
+  width: 130px;
+  padding: 7px;
+  margin-left: 26%;
+  border: none;
+  border-radius: 10px;
+  background: #232a47;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 17px;
+  outline:none;
+  cursor: pointer;
+}
+
+button:hover{
+  background: #BCC4E6;
+  color: #232a47;
+  font-style: oblique;
+}
+
+::placeholder{
+  font-size: 15px;
+  color: #303961;
+}
+
+.loginForm1{
+  top: 50.5%;
+  position: absolute;
+  left: 53px;
+  color: #303961;
+}
+.loginForm2{
+  top: 65.5%;
+  position: absolute;
+  left: 53px;
+  color: #303961;
+}
+
+.errorMess{
+  background: rgb(177, 10, 10);
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 5px;
+  color: white;
+  font-style: oblique;
+  font-size: 13px;
+}
+
+@media(max-width: 850px){
+  section{
+    width: 400px;
+  }
+}

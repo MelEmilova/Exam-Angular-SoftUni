@@ -1,0 +1,93 @@
+<!-- <h4>
+  {{modelMeatProduct |json}}
+</h4>
+<h4>
+  {{modelVegetableProduct |json}}
+</h4> -->
+
+<div class="container">
+  <h2 class="title heading">Select  peoducts and find recipe</h2>
+  <form #searchingForm="ngForm" (ngSubmit)="searchRecipe(input)">
+    <div class="searchRecipe">
+      <select name="titleProduct" [(ngModel)]="modelMeatProduct.title" #ProductMeat="ngModel">
+        <option value="MEAT"></option>
+        <option value="Chicken">Chicken</option>
+        <option value="Pork">Pork</option>
+        <option value="Beaf">Beaf</option>
+        <option value="Lamb">Lamb</option>
+      </select>
+      <i class="fas fa-search glass"></i>
+      <select name="titleProduct" [(ngModel)]="modelVegetableProduct.title" #Product="ngModel">
+        <option value="Vegetable"></option>
+        <option value="Potatoes">Potatoes</option>
+        <option value="Zucchini">Zucchini</option>
+        <option value="Tomato">Tomato</option>
+        <option value="Eggplant">Eggplant</option>
+        <option value="Carrots">Carrots</option>
+        <option value="Onions">Onions</option>
+        <option value="Eggplant">Eggplant</option>
+        <option value="Mushrooms">Mushrooms</option>
+      </select>
+
+      <select name="titleProduct" [(ngModel)]="modelDairyProduct.title" #Product="ngModel">
+        <option value="Dairy"></option>
+        <option value="Feta cheese">Feta cheese</option>
+        <option value="Yellow cheese">Yellow cheese</option>
+        <option value="Yoghurt">Yoghurt</option>
+        <option value="Milk">Milk</option>
+        <option value="Cream">Cream</option>
+        <option value="Cottage cheese">Cottage cheese</option>
+        <option value="Sour cream">Sour cream</option>
+      </select>
+
+
+      <select name="titleProduct" [(ngModel)]="modelLegumesProduct.title" #Product="ngModel">
+        <option value="Legumes"></option>
+        <option value="Beans">Beans</option>
+        <option value="Lentils">Lentils</option>
+        <option value="Rice">Rice</option>
+        <option value="Chickpeas">Chickpeas</option>
+      </select>
+
+    </div>
+    <button type="submit" class="find">Find.....</button>
+  </form>
+</div>
+
+  <section>
+    <article *ngFor="let recipe of result" class="ImgTitle">
+      <div class="innerContainer">
+        <img src={{recipe.imageUrl}}>
+        <h3 class="title">{{recipe.title}}</h3>
+      </div>
+      <details>
+        <summary>Recipe <i class="fas fa-utensils"></i></summary>
+  
+          <div class="products-details">
+            <article class="products">
+              <h3 class="productsList ">Products</h3>
+              <ul>
+               
+                <div>
+                  <li *ngFor="let el of recipe.productQuantities">{{el.quantity}}</li>
+                </div>
+                <div class="products-details">
+                  <li *ngFor="let el of recipe.productQuantities">- {{el.quantityType}}</li>
+                </div>
+                <div class="products-details">
+                  <li *ngFor="let el of recipe.productQuantities" >- {{el.product.title}}</li>
+                </div>
+             
+              </ul>
+            </article>
+          </div>
+  
+  
+          <h3 class="productsList">Preparation</h3>
+          <p>{{recipe.description}}</p>
+  
+        <h4>Good appetite!</h4>
+      </details>
+    </article>
+  </section>
+

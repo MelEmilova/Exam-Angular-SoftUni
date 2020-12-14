@@ -1,0 +1,25 @@
+<nav>
+  <div class="nav-header">
+    <a routerLink="" class="home">HOME</a>
+    <ul>
+      <li><a routerLink="/all-recipes">ALL RECIPE</a></li>
+      <li><a routerLink="/find-recipe">FIND RECIPE</a></li>
+      <li  *ngIf="authService.checkIfLoged()"><a routerLink="/create-recipe">CREATE RECIPE</a></li>
+      <li *ngIf="authService.checkIfLoged()"><a routerLink="" (click)="logout()" >LOGOUT</a></li>
+      <li *ngIf="!authService.checkIfLoged()"><a routerLink="/login" >LOG IN</a></li>
+      <li *ngIf="!authService.checkIfLoged()"><a routerLink="/register" >REGISTER</a></li>
+
+
+    </ul>
+  </div>
+  <img src="../../assets/logo/лого.png" alt="logo">
+  <div class="title-area">
+
+    <h1>TASTY<span class="title-area-and">and</span> EASY</h1>
+    <div class="subtitle">
+      <p>guide for beginners</p>
+      <!-- <p *ngIf="authService.checkIfLoged()"> Hello{{user.email}}</p> -->
+    </div>
+
+  </div>
+</nav>

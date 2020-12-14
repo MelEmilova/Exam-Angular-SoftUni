@@ -1,0 +1,38 @@
+<app-loader [isLoading]="!results"></app-loader>
+
+<section>
+  <article *ngFor="let recipe of results" class="ImgTitle">
+    <div class="innerContainer">
+      <img src={{recipe.imageUrl}}>
+      <h3 class="title responce">{{recipe.title}}</h3>
+    </div>
+    <details>
+      <summary>Recipe <i class="fas fa-utensils"></i></summary>
+
+        <div class="products-details">
+          <article class="products">
+            <h3 class="productsList title">Products</h3>
+            <ul>
+             
+              <div>
+                <li *ngFor="let el of recipe.productQuantities">{{el.quantity}}</li>
+              </div>
+              <div class="products-details">
+                <li *ngFor="let el of recipe.productQuantities">- {{el.quantityType}}</li>
+              </div>
+              <div class="products-details">
+                <li *ngFor="let el of recipe.productQuantities" >- {{el.product.title}}</li>
+              </div>
+           
+            </ul>
+          </article>
+        </div>
+
+
+        <h3 class="productsList">Preparation</h3>
+        <p>{{recipe.description}}</p>
+
+      <h4>Good appetite!</h4>
+    </details>
+  </article>
+</section>

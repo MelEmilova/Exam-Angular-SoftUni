@@ -1,0 +1,10 @@
+<section class="container">
+  <h1>Save Recipe</h1>
+  <h5>CREATE AN ACOUNT & SAVE RECIPE</h5>
+  <form action="/"> 
+ 
+    <button routerLink="/login"   *ngIf="!authService.checkIfLoged()">SIGN UP NOW</button>
+
+    <button routerLink="/create-recipe" *ngIf="authService.checkIfLoged()">CREATE YOUR RECIPE</button>
+  </form>
+</section>

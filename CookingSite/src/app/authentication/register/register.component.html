@@ -1,0 +1,48 @@
+
+<section>
+  <div class="innerContainer">
+    <form #registrationForm="ngForm"  (ngSubmit)="register()">
+      <div class="heading">
+       
+        <i class="far fa-user logo"></i>
+        <h3>Register</h3>
+      </div>
+
+
+      <input type="email" placeholder="Email..." 
+      required
+      pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      name="email"
+      [(ngModel)]="modelRegister.email"
+      #email="ngModel">
+      <div class="errorMess"  [hidden]="email.valid || email.pristine">
+        Invalid email address
+       </div>
+
+
+
+
+      <input type="password" placeholder="Password"
+      required
+      pattern="^[A-Za-z\d]{4,16}$"
+       name="password"
+      [(ngModel)]="modelRegister.password"
+     #password="ngModel">
+     <div [hidden]="password.valid || password.pristine"  minlength="4" class="errorMess" >
+      Password must contain only letters and digits and must at least 4 symbols.
+     </div>
+
+      <input type="password" placeholder="RePassword"
+      required
+      name="confirmPassword"
+      [(ngModel)]="modelRegister.confirmPassword"
+     #confirmPassword="ngModel">
+     <div [hidden]="password.value === confirmPassword.value|| confirmPassword.pristine"  class="errorMess">
+      Both passwords must match.
+    </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</section>

@@ -1,0 +1,12 @@
+section {
+  width: 800px;
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: 100px;
+  margin-bottom: 383px;
+  margin-left: 40%;
+  font-style: oblique;
+  color: #303961;
+
+  text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}

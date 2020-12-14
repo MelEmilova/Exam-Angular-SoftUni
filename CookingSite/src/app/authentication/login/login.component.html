@@ -1,0 +1,36 @@
+<section>
+  <article>
+    <form #loginForm="ngForm"  (ngSubmit)="login()">
+      <h3>Login</h3>
+      <i class="far fa-user logo"></i>
+      <br>
+
+      <input type="email" placeholder="Email..."
+      required
+      [(ngModel)]="modelLogin.email"
+      name="email"
+      #email="ngModel">
+      <div [hidden]="email.value || email.pristine" class="errorMess">
+        Email is required
+      </div>
+
+      <input type="password" placeholder="Password"
+      required
+      [(ngModel)]="modelLogin.password"
+      name="password"
+      #password="ngModel">
+      <div [hidden]="password.value || password.pristine" class="errorMess">
+        Password is required
+      </div>
+
+      <button type="submit">LOGIN</button>
+      
+    </form>
+
+    <div>
+      
+    </div>
+  </article>
+
+</section>
+
