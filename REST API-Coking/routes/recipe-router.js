@@ -4,6 +4,115 @@ const Quantity = require('../models/Quantity-model')
 const isAuth = require('../utilis/auth');
 const router = Router();
 
+
+
+router.post('/find-recipe-meat', (req, res) => {
+  let resultMeat = []
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(data => {
+    let { category } = req.body;
+    console.log(category);
+
+    data.map(recipe => {
+      recipe.productQuantities.map(quant => {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe)
+        }
+       
+      })
+    })
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  })
+});
+
+router.post('/find-recipe-dairy', (req, res) => {
+  let resultMeat = []
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(data => {
+    let { category } = req.body;
+    console.log(category);
+
+    data.map(recipe => {
+      recipe.productQuantities.map(quant => {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe)
+        }
+       
+      })
+    })
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  })
+});
+
+
+router.post('/find-recipe-vegetables', (req, res) => {
+  let resultMeat = []
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(data => {
+    let { category } = req.body;
+    console.log(category);
+
+    data.map(recipe => {
+      recipe.productQuantities.map(quant => {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe)
+        }
+       
+      })
+    })
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  })
+});
+
+router.post('/find-recipe-legumes', (req, res) => {
+  let resultMeat = []
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(data => {
+    let { category } = req.body;
+    console.log(category);
+
+    data.map(recipe => {
+      recipe.productQuantities.map(quant => {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe)
+        }
+       
+      })
+    })
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  })
+});
+
+
+
+router.post('/find-resipe-details', (req, res) => {
+  let id = req.body;
+  console.log(id);
+})
+
+
+
+
 router.post('/find-recipe', (req, res, next) => {
   let result = [];
   console.log(result);
