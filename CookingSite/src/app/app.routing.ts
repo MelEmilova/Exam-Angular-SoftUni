@@ -8,6 +8,10 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { LoginComponent } from './authentication/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { FindRecipeComponent } from './find-recipe/find-recipe.component';
+import { MeatRecipeComponent } from './categoryRecipe/meat-recipe/meat-recipe.component'
+import { DairyRecipeComponent } from './categoryRecipe/dairy-recipe/dairy-recipe.component'
+import { VegeablesRecipeComponent } from './categoryRecipe/vegeables-recipe/vegeables-recipe.component'
+import { LegumesRecipeComponent } from './categoryRecipe/legumes-recipe/legumes-recipe.component'
 
 const routes: Routes = [
   {
@@ -39,10 +43,24 @@ const routes: Routes = [
   {
     path:'find-recipe',
     component: FindRecipeComponent
+  },
+  {
+    path:'find-recipe-meat',
+    component:MeatRecipeComponent
+  },
+  {
+    path:'find-recipe-dairy',
+    component:DairyRecipeComponent
+  },
+  {
+    path:'find-recipe-vegetables',
+    component:VegeablesRecipeComponent
+  },
+  {
+    path:'find-recipe-legumes',
+    component:LegumesRecipeComponent
   }
 
-
-  
 
 ];
 

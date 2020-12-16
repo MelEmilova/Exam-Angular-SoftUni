@@ -6,7 +6,7 @@
  html{
   background-image: url('./assets/background/wood-2142241_1920.jpg');
   background-repeat: no-repeat;
-  background-position: top;
+  /* background-position: top; */
   background-size: cover;
 } 
 

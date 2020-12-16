@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent  implements OnInit{
 
 
-  // @Input('user') user:  LoginModel
+  @Input('user') user:  LoginModel
 
   constructor(
     public authService: AuthService,
@@ -24,13 +24,10 @@ export class HeaderComponent  implements OnInit{
 
   logout(){
     this.authService.logout()
-    .subscribe(data =>{
       localStorage.token = '';
       localStorage.removeItem('token')
       this.router.navigate([''])
       console.log(localStorage.token);
-    })
-      
   }
 
 }

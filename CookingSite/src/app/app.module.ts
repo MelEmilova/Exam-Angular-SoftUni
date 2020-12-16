@@ -20,6 +20,11 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { LoginComponent } from './authentication/login/login.component';
 import { FindRecipeComponent } from './find-recipe/find-recipe.component';
 import { LoaderComponent } from './loader/loader.component';
+import { MeatRecipeComponent } from './categoryRecipe/meat-recipe/meat-recipe.component';
+import { DairyRecipeComponent } from './categoryRecipe/dairy-recipe/dairy-recipe.component';
+import { VegeablesRecipeComponent } from './categoryRecipe/vegeables-recipe/vegeables-recipe.component';
+import { LegumesRecipeComponent } from './categoryRecipe/legumes-recipe/legumes-recipe.component';
+
 
 
 @NgModule({
@@ -35,7 +40,11 @@ import { LoaderComponent } from './loader/loader.component';
     RegisterComponent,
     LoginComponent,
     FindRecipeComponent,
-    LoaderComponent
+    LoaderComponent,
+    MeatRecipeComponent,
+    DairyRecipeComponent,
+    VegeablesRecipeComponent,
+    LegumesRecipeComponent,
   ],
   imports: [
     BrowserModule,

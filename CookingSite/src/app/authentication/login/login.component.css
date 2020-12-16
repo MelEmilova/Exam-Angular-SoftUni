@@ -1,13 +1,14 @@
 section{
- height: 500px;
- width: 550px;
- background: linear-gradient(90deg, rgba(48,57,97,1) 0%, rgba(191,199,233,1) 50%, rgba(48,57,97,1) 100%);
- box-shadow: 1px 0px 28px 0px rgba(10,9,10,1);
- height: 451px;
- margin: 0 auto;
- margin-bottom: 100px;
- border: none;
- border-radius: 20px;
+  width: 550px;
+  background: linear-gradient(90deg, rgba(48,57,97,1) 0%, rgba(191,199,233,1) 50%, rgba(48,57,97,1) 100%);
+  box-shadow: 1px 0px 28px 0px rgba(10,9,10,1);
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 67px;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  top: -40px;
 }
 
 article{
@@ -16,7 +17,7 @@ article{
   margin: 0 auto;
   background: #303961a1;
   position: relative;
-  top: 55px;
+  top: 35px;
   border-radius: 20px;
 }
 

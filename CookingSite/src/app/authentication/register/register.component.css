@@ -1,13 +1,14 @@
 section {
   position: relative;
-  top: -80px;
+  top: -71px;
   width: 650px;
   background: linear-gradient(90deg, rgba(23,88,6,1) 0%, rgba(125,188,117,1) 50%, rgba(23,88,6,1) 100%);
   box-shadow: 1px 0px 28px 0px rgba(10, 9, 10, 1);
-  height: 492px;
-  margin: 12px auto;
+  height: 465px;
+  margin: 0 auto;
   border: none;
   border-radius: 20px;
+  margin-bottom: -30px;
 }
 
 .innerContainer {
@@ -16,7 +17,7 @@ section {
   margin: 0 auto;
   background: #165806c2;
   position: relative;
-  top: 55px;
+  top: 45px;
   border-radius: 20px;
 }
 

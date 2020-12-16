@@ -133,7 +133,7 @@ export class CreateRecipeComponent implements OnInit {
     this.recipeService
       .getAllProducts()
       .subscribe(dataAllPrd => {
-
+        resultQuon.splice(0)
         this.allproducts = dataAllPrd
         console.log("All Products", this.allproducts);
 
@@ -249,10 +249,10 @@ export class CreateRecipeComponent implements OnInit {
   }
 
   createRecipe() {
+    this.router.navigate(["/all-recipes"])
     this.recipeService
       .createRecipe(this.recipeForFetch)
       .subscribe(data => {
-        console.log("Recipe Succsses", data );
       })
   }
 }

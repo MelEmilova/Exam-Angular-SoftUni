@@ -55,8 +55,8 @@
 
 
 .title-area{
-  margin-top: 2%;
-  margin-left: 5%
+  margin-left: 1%;
+  display: inline-block;
 }
 
 h1{
@@ -84,16 +84,18 @@ h1 span{
 }
  img{
   width: 100px;
-  transform: rotate(50deg);
+  transform: rotate(-25deg);
   position: relative;
   top: -20px;
   z-index: -1;
-  left: 10px;
+  left: 280px;
   position: absolute;
-  top: 81px;
+  top: 100px;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 @media (max-width: 850px) {
   nav {

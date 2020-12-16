@@ -53,4 +53,20 @@ export class RecipesService {
     return this.httpClient.get<any>(`${this.path}getAll-products`)
   }
 
+  getAllMeatRecipes(input) :Observable<Object>{
+    return this.httpClient.post<any>(`${this.path}find-recipe-meat`,input)
+  }
+
+  getAllDairyRecipes(input) :Observable<Object>{
+    return this.httpClient.post<any>(`${this.path}find-recipe-dairy`,input)
+  }
+
+  getAllVegetablesRecipes(input) :Observable<Object>{
+    return this.httpClient.post<any>(`${this.path}find-recipe-vegetables`,input)
+  }
+
+  getAllLegumesRecipes(input) :Observable<Object>{
+    return this.httpClient.post<any>(`${this.path}find-recipe-legumes`,input)
+  }
+
 }

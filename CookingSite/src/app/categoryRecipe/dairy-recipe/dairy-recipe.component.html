@@ -1,5 +1,6 @@
+
 <app-loader [isLoading]="!results"></app-loader>
-<h2 class=" meatHeading" *ngIf="results">All recipes</h2>
+<h2 class=" meatHeading" *ngIf="results">All Dairy recipes</h2>
 <section>
   <article *ngFor="let recipe of results" class="ImgTitle">
     <div class="innerContainer">
@@ -36,4 +37,5 @@
     </details>
   </article>
 </section>
+
 
