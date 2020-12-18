@@ -12,6 +12,7 @@ import { MeatRecipeComponent } from './categoryRecipe/meat-recipe/meat-recipe.co
 import { DairyRecipeComponent } from './categoryRecipe/dairy-recipe/dairy-recipe.component'
 import { VegeablesRecipeComponent } from './categoryRecipe/vegeables-recipe/vegeables-recipe.component'
 import { LegumesRecipeComponent } from './categoryRecipe/legumes-recipe/legumes-recipe.component'
+import { DetailsRecipeComponent }  from './details-recipe/details-recipe.component'
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path:'find-recipe-legumes',
     component:LegumesRecipeComponent
+  },
+  {
+    path:'recipe-details/:id',
+    component: DetailsRecipeComponent
   }
 
 

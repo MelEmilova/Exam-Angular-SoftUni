@@ -1,6 +1,6 @@
 <app-loader [isLoading]="!results"></app-loader>
 <h2 class=" meatHeading" *ngIf="results">All recipes</h2>
-<section>
+<!-- <section>
   <article *ngFor="let recipe of results" class="ImgTitle">
     <div class="innerContainer">
       <img src={{recipe.imageUrl}}>
@@ -35,5 +35,15 @@
       <h4>Good appetite!</h4>
     </details>
   </article>
-</section>
+</section> -->
 
+<section>
+  <article *ngFor="let recipe of results" class="ImgTitle">
+    <div class="innerContainer">
+      <img src={{recipe.imageUrl}}>
+      <h3 class="title responce">{{recipe.title}}</h3>
+    </div>
+    
+    <button routerLink="/recipe-details/{{recipe._id}}">Details<i class="fas fa-forward"></i></button>
+  </article>
+</section>

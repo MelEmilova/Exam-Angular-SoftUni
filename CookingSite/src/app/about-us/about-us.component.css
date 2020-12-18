@@ -10,6 +10,8 @@ section{
   background: rgba(82, 76, 59, 0.507);
   box-shadow: 4px 6px 25px 5px rgba(0,0,0,0.75);
   border-radius: 10px;
+  display: inline-table;
+  margin-left: 20%;
 }
 
 img{

@@ -69,4 +69,8 @@ export class RecipesService {
     return this.httpClient.post<any>(`${this.path}find-recipe-legumes`,input)
   }
 
+  getRecipeDetail(input){
+    return this.httpClient.get(`${this.path}recipe-details/${input}`)
+  }
+
 }

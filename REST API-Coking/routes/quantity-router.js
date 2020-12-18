@@ -12,7 +12,7 @@ const router = Router();
       quantityType,
       product
     }).then((createdQ) => {
-      console.log('Created', createdQ);
+      // console.log('Created', createdQ);
       res.send(createdQ)
     })
   });
@@ -23,7 +23,7 @@ const router = Router();
       if (err) {
         console.log('ERROR',err);
       }else{
-        console.log('All data is:', data);
+        // console.log('All data is:', data);
         res.status(200).send( data)
       }
     })

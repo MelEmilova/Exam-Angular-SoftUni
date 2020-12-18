@@ -88,7 +88,7 @@ export class CreateRecipeComponent implements OnInit {
   constructor(
     private recipeService: RecipesService,
     private router: Router) {
-    this.modelRecipe = new RecipeModel('', '', '', this.modelQuontity)
+    this.modelRecipe = new RecipeModel('','', '', '', this.modelQuontity)
     this.modelQuontity = new productQuantitiesModel('', '', this.modelProduct)
     this.modelProduct = new ProductModel('', '')
 

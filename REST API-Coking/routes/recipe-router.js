@@ -98,16 +98,33 @@ router.post('/find-recipe-legumes', (req, res) => {
        
       })
     })
-    console.log(resultMeat);
+
     return res.send(resultMeat);
   })
 });
 
 
 
-router.post('/find-resipe-details', (req, res) => {
-  let id = req.body;
-  console.log(id);
+router.get('/recipe-details/:id', (req, res) => {
+  let id = req.params;
+  // console.log("id",typeof(id.id));
+  let selected;
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(data =>{
+    data.map(recipe => {
+      // console.log('recipe-id', recipe._id);
+      // return res(recipe._id)
+      if (recipe._id == id.id) {
+        console.log(recipe);
+        return res.send(recipe)
+      }
+    })
+  })
+ 
 })
 
 

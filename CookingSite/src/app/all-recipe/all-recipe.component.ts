@@ -13,8 +13,7 @@ import { RecipesService } from '../service/recipes.service';
 export class AllRecipeComponent implements OnInit {
 
   results: any
-  // ind: string
-  // product: any
+
 
   @Input('recipe') recipe: RecipeModel
 
@@ -26,7 +25,7 @@ export class AllRecipeComponent implements OnInit {
     this.recipesService
       .getAllRecipe()
       .subscribe(data => {
-        // this.isLoading = true;
+
         this.results = data
       })
   }

@@ -16,6 +16,8 @@
 
  .container {
    display: flex;
+   /* flex-wrap: wrap; */
+ 
  }
 
  .innerContainer {
@@ -24,6 +26,7 @@
    box-shadow: 0px 0px 32px -2px rgba(0, 0, 0, 0.75);
    border: none;
    border-radius: 10px;
+   margin-bottom: 20px;
  }
 
  .innerContainer:first-child {
@@ -112,9 +115,19 @@
 
  .uploadRecipe-description textarea {
    margin-left: 40px;
+   
  }
 
+ .textAreaDiv{
+   display: flex;
+   margin-right: 10px;
+ }
 
+.btnPreview{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
 
  button {
    padding: 10px 20px;
@@ -186,6 +199,9 @@
    text-decoration: underline;
  }
 
+ span{
+   color: red;
+ }
 
 
 

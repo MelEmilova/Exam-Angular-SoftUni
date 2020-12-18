@@ -1,0 +1,28 @@
+<app-loader [isLoading]="!myRecipe"></app-loader>
+<section *ngIf="myRecipe">
+  <h1>{{myRecipe.title}}</h1>
+  <div class="container-img-product">
+    <img src={{myRecipe.imageUrl}} alt="">
+    <h3>Products</h3>
+    <ul>
+  
+      <div class="products-details">
+        <li *ngFor="let el of myRecipe.productQuantities"><i class="far fa-check-circle prod"></i></li>
+      </div>
+      <div class="products-details">
+        <li *ngFor="let el of myRecipe.productQuantities">{{el.quantity}}</li>
+      </div>
+      <div class="products-details">
+        <li *ngFor="let el of myRecipe.productQuantities">- {{el.quantityType}}</li>
+      </div>
+      <div class="products-details">
+        <li *ngFor="let el of myRecipe.productQuantities">- {{el.product.title}}</li>
+      </div>
+    </ul>
+  </div>
+  <h3 class="productsList">Preparation</h3>
+  <p>{{myRecipe.description}}</p>
+
+  <h4>Good appetite!</h4>
+  <button routerLink="/all-recipes"><i class="fas fa-backward back"></i>  Back</button>
+</section>

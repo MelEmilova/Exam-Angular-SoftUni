@@ -6,6 +6,7 @@ import { ProductMeatModel } from '../model/productMeat.model'
 import { ProductVegetableModel } from '../model/productVegetable.model'
 import { ProductDairyModel } from '../model/productDairy.model'
 import { ProductLegumesModel } from '../model/productLegumes.model'
+import { title } from 'process';
 
 const dataForSearch = {
   allProducts: []
@@ -72,6 +73,7 @@ export class FindRecipeComponent implements OnInit {
       .subscribe(data => {
         dataForSearch.allProducts.splice(0)
         this.result = data
+
       })
   }
 

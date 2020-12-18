@@ -11,7 +11,7 @@
         <option value="Beaf">Beaf</option>
         <option value="Lamb">Lamb</option>
       </select>
-      <i class="fas fa-search glass fa-rotate-90"></i>
+      <!-- <i class="fas fa-search glass fa-rotate-90"></i> -->
       <select name="titleProduct" [(ngModel)]="modelVegetableProduct.title" #Product="ngModel">
         <option value="Vegetable"></option>
         <option value="Potatoes">Potatoes</option>
@@ -43,13 +43,16 @@
         <option value="Rice">Rice</option>
         <option value="Chickpeas">Chickpeas</option>
       </select>
-
+      <div class="btnDiv">
+        <button type="submit" class="find">Find.....</button>
+      </div>
+     
     </div>
-    <button type="submit" class="find">Find.....</button>
+ 
   </form>
 </div>
 
-  <section>
+  <section >
     <article *ngFor="let recipe of result" class="ImgTitle">
       <div class="innerContainer">
         <img src={{recipe.imageUrl}}>

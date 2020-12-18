@@ -12,6 +12,109 @@ var Quantity = require('../models/Quantity-model');
 var isAuth = require('../utilis/auth');
 
 var router = Router();
+router.post('/find-recipe-meat', function (req, res) {
+  var resultMeat = [];
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(function (data) {
+    var category = req.body.category;
+    console.log(category);
+    data.map(function (recipe) {
+      recipe.productQuantities.map(function (quant) {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe);
+        }
+      });
+    });
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  });
+});
+router.post('/find-recipe-dairy', function (req, res) {
+  var resultMeat = [];
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(function (data) {
+    var category = req.body.category;
+    console.log(category);
+    data.map(function (recipe) {
+      recipe.productQuantities.map(function (quant) {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe);
+        }
+      });
+    });
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  });
+});
+router.post('/find-recipe-vegetables', function (req, res) {
+  var resultMeat = [];
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(function (data) {
+    var category = req.body.category;
+    console.log(category);
+    data.map(function (recipe) {
+      recipe.productQuantities.map(function (quant) {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe);
+        }
+      });
+    });
+    console.log(resultMeat);
+    return res.send(resultMeat);
+  });
+});
+router.post('/find-recipe-legumes', function (req, res) {
+  var resultMeat = [];
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(function (data) {
+    var category = req.body.category;
+    console.log(category);
+    data.map(function (recipe) {
+      recipe.productQuantities.map(function (quant) {
+        if (quant.product.category === category) {
+          resultMeat.push(recipe);
+        }
+      });
+    });
+    return res.send(resultMeat);
+  });
+});
+router.get('/recipe-details/:id', function (req, res) {
+  var id = req.params; // console.log("id",typeof(id.id));
+
+  var selected;
+  Recipe.find().lean().populate({
+    path: "productQuantities",
+    populate: {
+      path: 'product'
+    }
+  }).then(function (data) {
+    data.map(function (recipe) {
+      // console.log('recipe-id', recipe._id);
+      // return res(recipe._id)
+      if (recipe._id == id.id) {
+        console.log(recipe);
+        return res.send(recipe);
+      }
+    });
+  });
+});
 router.post('/find-recipe', function (req, res, next) {
   var result = [];
   console.log(result);
